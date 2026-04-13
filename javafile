@@ -1,0 +1,203 @@
+/*import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        //create a variable to enter two value
+        //perform operations
+        //display result
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter two numbers");
+        double a = sc.nextDouble();
+        double b = sc.nextdouble();
+        System.out.println("Sum: "+ (a+b));
+        sc.close();
+    }
+}*/
+
+/*import java.util.Scanner;
+public class OddEven{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = reader.nextInt();
+        if (num%2==0){
+            System.out.println(num+"is even.");
+        }else{
+            System.out.println(num+"is odd.");
+        }
+        reader.close();
+    }
+}*/
+
+
+/*import java.util.Scanner;
+
+class PalindromeNumber {
+    public static void main(String[] args) {
+        int num, original, remainder, reverse = 0;
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        num = sc.nextInt();
+
+        original = num;
+
+        while (num != 0) {
+            remainder = num % 10;
+            reverse = reverse * 10 + remainder;
+            num = num / 10;
+        }
+
+        if (original == reverse)
+            System.out.println("Palindrome Number");
+        else
+            System.out.println("Not a Palindrome");
+    }
+}*/
+
+
+/*import java.util.Scanner;
+
+class FibonacciSeries {
+    public static void main(String[] args) {
+        int n, first = 0, second = 1, next;
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number of terms: ");
+        n = sc.nextInt();
+
+        System.out.println("Fibonacci Series:");
+
+        for (int i = 1; i <= n; i++) {
+            System.out.print(first + " ");
+
+            next = first + second;
+            first = second;
+            second = next;
+        }
+    }
+}*/
+
+
+/*import java.util.Scanner;
+
+class ArrayDemo {
+    public static void main(String[] args) {
+        int n, sum = 0;
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter size of array: ");
+        n = sc.nextInt();
+
+        int arr[] = new int[n];
+
+        // Input
+        System.out.println("Enter elements:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        // Display
+        System.out.println("Array elements are:");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+            sum += arr[i];
+        }
+
+        // Sum
+        System.out.println("\nSum of elements = " + sum);
+
+        // Largest element
+        int max = arr[0];
+        for (int i = 1; i < n; i++) {
+            if (arr[i] > max)
+                max = arr[i];
+        }
+
+        System.out.println("Largest element = " + max);
+    }
+}*/
+
+// prime no. check
+// break statement
+//teAChes efficiency and optimizing loop exits
+//step1: check if a no. is prime
+//step2: optimize the prime check by breaking out of the loop early
+//step3: analyze the efficiency of the optimized prime check
+//step4: compare the performance of the optimized prime check with a non-optimized version
+/*import java.util.Scanner;//for user input
+
+class PrimeNumber {
+    public static void main(String[] args) {
+        int num, i;
+        boolean isPrime = true;
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        num = sc.nextInt();
+
+        if (num <= 1) {
+            isPrime = false;
+        } else {
+            for (i = 2; i <= num / 2; i++) {
+                if (num % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+        }
+
+        if (isPrime)
+            System.out.println("Prime Number");
+        else
+            System.out.println("Not a Prime Number");
+    }
+}*/
+
+//Method overloading in java
+//real life example: a calculator that can perform addition on different types of numbers (integers, doubles, etc.) using method overloading to handle different data types with the same method name.
+//class to have more than one method with the same name but different parameters
+// this can be useful for creating method that perform similar functions but with different types of input 
+/*class Calculator {
+    // method to add two integers
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    // method to add three integers
+    public int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    // method to add two doubles
+    public double add(double a, double b) {
+        return a + b;
+    }
+} */
+
+public class Calculator {
+
+    public static void main(String[] args) {
+        double a=10.5;
+        double b=5.2;
+        System.out.println("Sum: "+ add(a,b));
+        System.out.println("Difference: "+ subtract(a,b));
+        System.out.println("Product: "+ multiply(a,b));
+        System.out.println("Quotient: "+ divide(a,b));
+    }
+    public static double add(double x, double y){
+        return x+y;
+    }
+    public static double subtract(double x, double y){
+        return x-y;
+    }
+    public static double multiply(double x, double y){
+        return x*y;
+    }
+    public static double divide(double x, double y){
+        if(y!=0){
+            return x/y;
+        }else{
+            System.out.println("Cannot divide by zero");
+            return 0; // or throw an exception
+        }

@@ -1,0 +1,22 @@
+// create a program of student name charlength
+// uppercase
+//lowercase
+import java.util.Scanner;
+public class StudentNameFormatter {
+    public static void main(String[] args) {
+        // create scanner object
+        Scanner sc= new Scanner(System.in);
+        // step 2 ask user to name student
+        System.out.print("Enter Student Name: ");
+        String name = sc.nextLine();
+        // step 3 print original name
+        System.out.println("Original Name: " + name);
+        // step 4 : find and print length of the name
+        System.out.println("Length Of Name: " + name.length());
+        //step 5 convert name to upper case
+        System.out.println("Uppercase: " + name.toUpperCase());
+        // step 6 conver name to lower case
+        System.out.println("Lowercase: " + name.toLowerCase());
+        sc.close();
+    }
+}

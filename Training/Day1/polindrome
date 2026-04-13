@@ -1,0 +1,40 @@
+/*Takes a number as input
+Stores original number
+Reverses the number using a loop
+Compares original with reversed
+Prints result */
+
+//wap in java to find factorial of a number
+import java.util.Scanner;
+//step 1: create a method to find factorial of a number
+class PalindromeNumber {
+    //step 2: create a variable to enter a number
+    public static void main(String[] args) {
+        //step 3: perform operations to find factorial of a number
+        int num, original, remainder, reverse = 0;
+        //step 4: display result
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        num = sc.nextInt();
+        //step 5: check if the number is negative
+        if (num < 0) {
+            System.out.println("Negative numbers are not considered palindrome.");
+            return;
+        }
+        //step 6: store original number
+        original = num;
+        //step 7: reverse the number using a loop
+        while (num != 0) {
+            remainder = num % 10;
+            reverse = reverse * 10 + remainder;
+            num = num / 10;
+        }
+        //step 8: compare original with reversed
+        if (original == reverse)
+            System.out.println("Palindrome Number");
+        else
+            System.out.println("Not a Palindrome");
+
+        sc.close();
+    }
+}
